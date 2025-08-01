@@ -1,0 +1,61 @@
+{
+  "name": "valorant-resolution-manager",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "dist": "electron-builder --publish=never"
+  },
+  "build": {
+    "appId": "com.sl34x.valorantresolution",
+    "productName": "Valorant Resolution Manager Beta v0.1",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "monitoring.js",
+      "nircmd.exe",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "nircmd.exe",
+        "to": "nircmd.exe"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "requestedExecutionLevel": "requireAdministrator",
+      "verifyUpdateCodeSignature": false,
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Valorant Resolution Manager"
+    },
+    "portable": {
+      "artifactName": "ValorantResolutionManager-${version}-portable.exe"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
+  },
+  "description": "Valorant Resolution Manager - Automatically switches resolution for Valorant matches",
+  "author": "sl34x"
+}
