@@ -72,12 +72,6 @@ npm start
 
 ---
 
-## 🪪 License
-
-This project is licensed under the MIT License.
-
----
-
 ## ✉️ Feedback
 
 You can use Discord for questions or suggestions:  
