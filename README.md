@@ -30,7 +30,7 @@ npm start
 
 ## 🎥 YouTube Tutorial
 
-📺 A full video tutorial will be added soon. Stay tuned.
+📺 [Video](https://youtu.be/4aumEhsGam4)
 
 ---
 
